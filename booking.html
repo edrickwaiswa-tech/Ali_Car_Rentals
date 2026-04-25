@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Ride | Ali Car Rentals</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --brand-green: #2B7A0B;
+            --dark-grey: #1A1A1A;
+            --light-bg: #F4F7F6;
+            --white: #FFFFFF;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--light-bg); }
+
+        /* NAVIGATION */
+        .navbar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 15px 8%; background: var(--white);
+            position: sticky; top: 0; z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        .logo h2 { font-family: 'Montserrat'; font-weight: 800; color: var(--dark-grey); }
+        .logo span { color: var(--brand-green); }
+        nav a { color: var(--dark-grey); text-decoration: none; margin-left: 30px; font-weight: 600; font-size: 14px; text-transform: uppercase; }
+
+        /* BOOKING HEADER */
+        .booking-hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.pexels.com/photos/164634/pexels-photo-164634.jpeg');
+            background-size: cover; background-position: center;
+            height: 300px; display: flex; align-items: center; justify-content: center; color: white;
+        }
+
+        /* FORM CONTAINER */
+        .form-container {
+            max-width: 900px; margin: -50px auto 50px;
+            background: var(--white); padding: 40px; border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .form-title { text-align: center; margin-bottom: 30px; }
+        .form-title h2 { font-family: 'Montserrat'; color: var(--dark-grey); }
+        .form-title p { color: var(--brand-green); font-weight: 600; }
+
+        .booking-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .full-width { grid-column: span 2; }
+
+        .input-group { margin-bottom: 20px; }
+        .input-group label { display: block; margin-bottom: 8px; font-weight: 600; color: #444; font-size: 0.9rem; }
+        .input-group input, .input-group select, .input-group textarea {
+            width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-family: inherit;
+        }
+
+        .submit-btn {
+            width: 100%; background: var(--brand-green); color: white;
+            padding: 15px; border: none; border-radius: 5px;
+            font-weight: bold; font-size: 1rem; cursor: pointer; transition: 0.3s;
+            text-transform: uppercase; margin-top: 10px;
+        }
+        .submit-btn:hover { background: var(--dark-grey); }
+
+        /* FOOTER */
+        footer { background: var(--dark-grey); color: #ccc; padding: 40px 8%; text-align: center; margin-top: 50px; }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <h2>ALI <span>RENTALS</span></h2>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="booking.html" style="color: var(--brand-green);">Book Now</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="booking-hero">
+        <h1 style="font-family: 'Montserrat'; font-size: 3rem;">Reservation</h1>
+    </section>
+
+    <div class="form-container">
+        <div class="form-title">
+            <h2>Reserve Your Vehicle</h2>
+            <p>Best Car For Rent Today</p>
+        </div>
+
+        <form action="https://formspree.io/f/your_id" method="POST">
+            <div class="booking-grid">
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text" name="Name" placeholder="Enter your name" required>
+                </div>
+                <div class="input-group">
+                    <label>Phone Number</label>
+                    <input type="text" name="Phone" placeholder="+1 413..." required>
+                </div>
+
+                <div class="input-group full-width">
+                    <label>Select Car Type</label>
+                    <select name="Car_Type">
+                        <option value="Audi A7">Audi A7 Sportback (Luxury Sedan)</option>
+                        <option value="Toyota RAV4">Toyota RAV4 (SUV)</option>
+                        <option value="Economy">Economy Daily Driver</option>
+                        <option value="Other">Other (Specify in notes)</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Pickup Date</label>
+                    <input type="date" name="Pickup_Date" required>
+                </div>
+                <div class="input-group">
+                    <label>Return Date</label>
+                    <input type="date" name="Return_Date" required>
+                </div>
+
+                <div class="input-group full-width">
+                    <label>Additional Notes (Location: Dracut, MA)</label>
+                    <textarea name="Notes" rows="4" placeholder="Any special requests?"></textarea>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Check Availability</button>
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>ALI CAR RENTALS</h3>
+                <p>Top-tier car rental services in Dracut, Massachusetts and beyond.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <p><i class="fa fa-phone" style="color: var(--brand-green);"></i> +1 413 854 9831</p>
+                <p><i class="fa fa-map-marker" style="color: var(--brand-green);"></i> Dracut, Massachusetts</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ali Car Rentals. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</body>
+</html>

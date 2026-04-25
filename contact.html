@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Ali Car Rentals</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+         :root {
+            --brand-green: #2B7A0B; /* Matches your logo */
+            --dark-grey: #1A1A1A;
+            --light-bg: #F4F7F6;
+            --white: #FFFFFF;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--light-bg); }
+
+        /* NAVIGATION */
+        .navbar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 15px 8%; background: var(--white);
+            position: sticky; top: 0; z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        .logo h2 { font-family: 'Montserrat'; font-weight: 800; color: var(--dark-grey); }
+        .logo span { color: var(--brand-green); }
+        nav a { color: var(--dark-grey); text-decoration: none; margin-left: 30px; font-weight: 600; font-size: 13px; text-transform: uppercase; }
+
+        /* CONTACT SECTION */
+        .contact-container {
+            max-width: 1100px; margin: 60px auto; padding: 0 20px;
+            display: grid; grid-template-columns: 1fr 1.5fr; gap: 40px;
+        }
+
+        .contact-info {
+            background: var(--dark-grey); color: white;
+            padding: 40px; border-radius: 15px;
+        }
+        .contact-info h2 { font-family: 'Montserrat'; margin-bottom: 25px; color: var(--brand-green); }
+        .info-item { display: flex; align-items: center; margin-bottom: 30px; }
+        .info-item i { font-size: 24px; color: var(--brand-green); margin-right: 20px; }
+        .info-item p { font-size: 1.1rem; }
+
+        /* MAP BOX */
+        .map-box {
+            border-radius: 15px; overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            background: #eee; min-height: 400px;
+        }
+
+        /* SOCIAL LINKS */
+        .social-bar { margin-top: 40px; }
+        .social-bar a {
+            color: white; font-size: 20px; margin-right: 20px;
+            transition: 0.3s; text-decoration: none;
+        }
+        .social-bar a:hover { color: var(--brand-green); }
+
+        /* FOOTER */
+        footer { background: white; padding: 30px; text-align: center; border-top: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <h2>ALI <span>RENTALS</span></h2>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="booking.html">Book Now</a>
+            <a href="contact.html" style="color: var(--brand-green);">Contact</a>
+        </nav>
+    </header>
+
+    <div class="contact-container">
+        <div class="contact-info">
+            <h2>Get In Touch</h2>
+            
+            <div class="info-item">
+                <i class="fa fa-phone"></i>
+                <div>
+                    <strong>Call Us</strong>
+                    <p>+1 413 854 9831</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="fa fa-map-marker-alt"></i>
+                <div>
+                    <strong>Location</strong>
+                    <p>Dracut, Massachusetts</p>
+                </div>
+            </div>
+
+            <div class="info-item">
+                <i class="fa fa-clock"></i>
+                <div>
+                    <strong>Hours</strong>
+                    <p>Mon - Sat: 8AM - 8PM</p>
+                </div>
+            </div>
+
+            <div class="social-bar">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+
+        <div class="map-box">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2934.582845347209!2d-71.30948958453456!3d42.67027477916723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e3a3f5a5440001%3A0x6734133464a78120!2sDracut%2C%20MA!5e0!3m2!1sen!2sus!4v1710000000000!5m2!1sen!2sus" 
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>ALI CAR RENTALS</h3>
+                <p>Top-tier car rental services in Dracut, Massachusetts and beyond.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <p><i class="fa fa-phone" style="color: var(--brand-green);"></i> +1 413 854 9831</p>
+                <p><i class="fa fa-map-marker" style="color: var(--brand-green);"></i> Dracut, Massachusetts</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ali Car Rentals. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</body>
+</html>

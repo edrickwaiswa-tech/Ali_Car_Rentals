@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ali Car Rentals | Rent. Explore. Experience.</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --brand-green: #2B7A0B; /* Matches your logo */
+            --dark-grey: #1A1A1A;
+            --light-bg: #F4F7F6;
+            --white: #FFFFFF;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background-color: var(--light-bg); color: var(--dark-grey); }
+
+        /* NAVIGATION */
+        .navbar {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 15px 8%; background: var(--white);
+            position: sticky; top: 0; z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+        .logo-img { height: 60px; } /* Space for the Ali Car Rentals logo */
+        
+        nav a {
+            color: var(--dark-grey); text-decoration: none; margin-left: 30px;
+            font-weight: 600; font-size: 14px; text-transform: uppercase;
+            transition: 0.3s;
+        }
+        nav a:hover { color: var(--brand-green); }
+
+        /* HERO SECTION */
+        .hero {
+            height: 85vh; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/164634/pexels-photo-164634.jpeg');
+            background-size: cover; background-position: center;
+            display: flex; align-items: center; justify-content: center;
+            text-align: center; color: var(--white);
+        }
+        .hero-content h1 { font-family: 'Montserrat'; font-size: 4rem; text-transform: uppercase; line-height: 1; }
+        .hero-content h1 span { color: var(--brand-green); }
+        .hero-content p { font-size: 1.2rem; margin: 20px 0 30px; font-weight: 300; }
+
+        .btn-main {
+            padding: 15px 40px; background: var(--brand-green); color: var(--white);
+            text-decoration: none; font-weight: bold; border-radius: 5px;
+            text-transform: uppercase; transition: 0.3s; display: inline-block;
+        }
+        .btn-main:hover { background: var(--dark-grey); transform: translateY(-3px); }
+
+        /* FLEET PREVIEW */
+        .fleet-section { padding: 80px 8%; text-align: center; }
+        .fleet-section h2 { font-family: 'Montserrat'; font-size: 2.5rem; margin-bottom: 50px; }
+        
+        .car-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;
+        }
+        .car-card {
+            background: var(--white); border-radius: 10px; overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05); transition: 0.3s;
+        }
+        .car-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        
+        .car-img { width: 100%; height: 200px; object-fit: cover; }
+        .car-info { padding: 25px; }
+        .car-info h3 { margin-bottom: 10px; color: var(--dark-grey); }
+        .car-price { color: var(--brand-green); font-weight: 800; font-size: 1.3rem; margin-bottom: 15px; display: block; }
+        
+        .features { display: flex; justify-content: center; gap: 15px; font-size: 0.8rem; color: #777; margin-bottom: 20px; }
+        .features span i { color: var(--brand-green); margin-right: 5px; }
+
+        /* FOOTER */
+        footer { background: var(--dark-grey); color: #ccc; padding: 60px 8% 20px; }
+        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
+        .footer-col h3 { color: var(--white); margin-bottom: 20px; font-family: 'Montserrat'; }
+        .footer-bottom { text-align: center; border-top: 1px solid #333; margin-top: 50px; padding-top: 20px; font-size: 0.8rem; }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <h2 style="font-family: 'Montserrat'; font-weight: 800; color: var(--dark-grey);">ALI <span style="color: var(--brand-green);">RENTALS</span></h2>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#fleet">Our Fleet</a>
+            <a href="booking.html">Book Now</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Best Car For <br><span>Rent Today</span></h1>
+            <p>Make your ride better. Rent. Explore. Experience.</p>
+            <a href="booking.html" class="btn-main">View All Cars</a>
+        </div>
+    </section>
+
+    <section id="fleet" class="fleet-section">
+        <h2>Featured Fleet</h2>
+        <div class="car-grid">
+            <div class="car-card">
+                <img src="https://images.pexels.com/photos/3729464/pexels-photo-3729464.jpeg" class="car-img" alt="Luxury Sedan">
+                <div class="car-info">
+                    <h3>Audi A7 Sportback</h3>
+                    <div class="features">
+                        <span><i class="fa fa-user"></i> 5 Seats</span>
+                        <span><i class="fa fa-cog"></i> Auto</span>
+                    </div>
+                    <span class="car-price">$120 / Day</span>
+                    <a href="booking.html" class="btn-main" style="padding: 10px 20px; font-size: 0.8rem;">Rent Now</a>
+                </div>
+            </div>
+
+            <div class="car-card">
+                <img src="https://images.pexels.com/photos/1149137/pexels-photo-1149137.jpeg" class="car-img" alt="SUV">
+                <div class="car-info">
+                    <h3>Toyota RAV4 Luxury</h3>
+                    <div class="features">
+                        <span><i class="fa fa-user"></i> 5 Seats</span>
+                        <span><i class="fa fa-gas-pump"></i> Hybrid</span>
+                    </div>
+                    <span class="car-price">$90 / Day</span>
+                    <a href="booking.html" class="btn-main" style="padding: 10px 20px; font-size: 0.8rem;">Rent Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>ALI CAR RENTALS</h3>
+                <p>Top-tier car rental services in Dracut, Massachusetts and beyond.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <p><i class="fa fa-phone" style="color: var(--brand-green);"></i> +1 413 854 9831</p>
+                <p><i class="fa fa-map-marker" style="color: var(--brand-green);"></i> Dracut, Massachusetts</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Ali Car Rentals. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
